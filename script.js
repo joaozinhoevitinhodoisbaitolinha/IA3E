@@ -5,16 +5,16 @@ const caixaResultado = document.querySelector('.caixa-resultado');
 
 const perguntas = [//abre a lista de objetos (itens)
     {//abre o item
-        enunciado:"Voce gosta de estudar?",
-        alternativas:["Sim","Nao"]
+        enunciado:"Pergunta 1",
+        alternativas:["Alternativa 1","Alternativa 2"]
     },
     {
-        enunciado:"Voce gosta de portugues",
-        alternativas:["Sim","Alternativa 2"]
+        enunciado:"Pergunta 2",
+        alternativas:["Alternativa 1","Alternativa 2"]
     },
     {
-        enunciado:"Voce gosta de matematica",
-        alternativas:["SIm","Nao"]
+        enunciado:"Pergunta 3",
+        alternativas:["Alternativa 1","Alternativa 2"]
     }
 ]
 let posicao = 0;
@@ -23,9 +23,13 @@ let perguntaAtual;
 function mostraPergunta(){
     perguntaAtual = perguntas[posicao];
     caixaPergunta.textContent = perguntaAtual.enunciado;
-    mostraAlternativas();
+    
 }
-
-function mostraAlternativas(){
-    for
+function mostraAlternativas (){
+    for (const alternativa of perguntaAtual.alternativa){
+        const botaoAlternativas = document.createElement ("button")
+        botaoAlternativas.textContent = alternativa;
+        caixaAlternativa.appendChild (botaoAlternativas);
+    }
 }
+mostraPergunta
